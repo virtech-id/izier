@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        'glow': '0 0 10px rgba(76, 195, 138, 1)'
+      }
+    },
     fontFamily: {
       'inter': ['Inter', 'Arial', 'sans-serif']
     }
