@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Button from "@/component/ui/Button";
+import Blob from "@/component/blob/Blob";
+import { Canvas } from "@react-three/fiber";
 
 export default function Home() {
 	return (
@@ -19,6 +21,9 @@ export default function Home() {
 					<span>Join waitlist</span>
 				</Button>
 			</header>
+			<Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
+				<Blob />
+			</Canvas>
 		</main>
 	);
 }
