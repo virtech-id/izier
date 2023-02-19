@@ -28,8 +28,12 @@ const ButtonVariants = styled("button", {
 				boxShadow: "0 0 10px $$shadowColor",
 				color: grayDark.gray1,
 				"&:hover": {
-                    boxShadow: "0 0 20px $$shadowColor",
-                    transition: "box-shadow 200ms ease-in-out",
+					boxShadow: "0 0 20px $$shadowColor",
+					transition: "box-shadow 200ms ease-in-out",
+				},
+				"&:not(:hover)": {
+					boxShadow: "0 0 10px $$shadowColor",
+					transition: "box-shadow 400ms ease-in-out",
 				},
 			},
 			destructive: {
