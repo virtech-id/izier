@@ -28,7 +28,8 @@ const ButtonVariants = styled("button", {
 				boxShadow: "0 0 10px $$shadowColor",
 				color: grayDark.gray1,
 				"&:hover": {
-					boxShadow: "0 0 20px $$shadowColor",
+                    boxShadow: "0 0 20px $$shadowColor",
+                    transition: "box-shadow 200ms ease-in-out",
 				},
 			},
 			destructive: {
@@ -64,7 +65,7 @@ const ButtonVariants = styled("button", {
 	},
 });
 
-type ButtonProps = {
+export type ButtonProps = {
 	variant: "default" | "subtle" | "destructive" | "ghost" | "link";
 	children: React.ReactNode;
 } & React.ComponentProps<typeof ButtonVariants>;
