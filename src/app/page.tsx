@@ -4,11 +4,28 @@ import Image from "next/image";
 import Button from "@/component/ui/Button";
 import Blob from "@/component/blob/Blob";
 import { Canvas } from "@react-three/fiber";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+	const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+	useEffect(() => {
+		const timeout = setTimeout(() => {
+			setIsHeaderVisible(true);
+		}, 500);
+
+		return () => {
+			clearTimeout(timeout);
+		};
+	}, []);
+
 	return (
 		<main className="flex flex-col justify-between p-8 min-w-screen max-w-5xl mx-auto bg-black">
-			<header className="flex flex-row justify-between items-center">
+			<header
+				className={`flex flex-row justify-between items-center bg-transparent z-10 opacity-0 transform -translate-y-full transition-all duration-1000 ${
+					isHeaderVisible ? "opacity-100 translate-y-0" : ""
+				}`}
+			>
 				<Image
 					className=""
 					src="/izier.svg"
