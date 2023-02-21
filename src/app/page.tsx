@@ -21,7 +21,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<main className="flex flex-col justify-between p-8 min-w-screen max-w-5xl md:min-w-3xl mx-auto bg-black">
+		<main className="flex flex-col justify-between max-w-5xl p-8 mx-auto bg-black min-w-screen md:min-w-3xl">
 			<header
 				className={`flex flex-row justify-between items-center bg-transparent z-10 opacity-0 transform -translate-y-full transition-all duration-1000 ${
 					isHeaderVisible ? "opacity-100 translate-y-0" : ""
