@@ -5,6 +5,7 @@ import Button from "@/component/ui/Button";
 import Blob from "@/component/blob/Blob";
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
+import { Root } from "@radix-ui/react-toolbar";
 
 export default function Home() {
 	const [isHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -34,9 +35,11 @@ export default function Home() {
 					height={18}
 					priority
 				/>
-				<Button intent="subtle">
-					<span>Join waitlist</span>
-				</Button>
+				<Root>
+					<Button intent="subtle">
+						<span>Join waitlist</span>
+					</Button>
+				</Root>
 			</header>
 			<Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
 				<Blob />
