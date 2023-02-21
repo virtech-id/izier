@@ -1,84 +1,43 @@
-import React from "react";
-import { styled } from "@stitches/react";
-import { grayDark, whiteA, redDark, greenDark } from "@radix-ui/colors";
+import * as Toolbar from "@radix-ui/react-toolbar";
+import { cva } from "class-variance-authority";
+import { FC } from "react";
 
-const ButtonVariants = styled("button", {
-	display: "inline-flex",
-	justifyContent: "center",
-	alignItems: "center",
-	fontWeight: "500",
-	fontFamily: "Inter",
-	borderRadius: "0.25rem",
-	padding: "0.5rem 1rem",
-	fontSize: "0.875rem",
-	lineHeight: "1.25rem",
-	transition: "background-color 200ms ease-in-out",
-	variants: {
-		variant: {
-			default: {
-				backgroundColor: grayDark.gray6,
-				color: grayDark.gray11,
-				"&:hover": {
-					backgroundColor: grayDark.gray8,
-				},
-			},
-			subtle: {
-				$$shadowColor: greenDark.green11,
-				backgroundColor: whiteA.whiteA12,
-				boxShadow: "0 0 10px $$shadowColor",
-				color: grayDark.gray1,
-				"&:hover": {
-					boxShadow: "0 0 20px $$shadowColor",
-					transition: "box-shadow 200ms ease-in-out",
-				},
-				"&:not(:hover)": {
-					boxShadow: "0 0 10px $$shadowColor",
-					transition: "box-shadow 400ms ease-in-out",
-				},
-			},
-			destructive: {
-				backgroundColor: redDark.red6,
-				color: whiteA.whiteA12,
-				"&:hover": {
-					backgroundColor: redDark.red8,
-				},
-			},
-			ghost: {
-				backgroundColor: whiteA.whiteA1,
-				color: whiteA.whiteA10,
-				"&:hover": {
-					backgroundColor: whiteA.whiteA8,
-					color: whiteA.whiteA12,
-				},
-			},
-			link: {
-				backgroundColor: "transparent",
-				color: grayDark.gray1,
-				textDecoration: "underline",
-				"&:hover": {
-					backgroundColor: grayDark.gray8,
-				},
-			},
-		},
-		outlined: {
-			true: {
-				border: "1px solid",
-				borderColor: grayDark.gray10,
-			},
-		},
-	},
-});
-
-export type ButtonProps = {
-	variant: "default" | "subtle" | "destructive" | "ghost" | "link";
+type ButtonProps = {
+	intent?: "default" | "subtle" | "destructive" | "ghost";
+	outlined?: boolean;
+	onClick?: () => void;
 	children: React.ReactNode;
-} & React.ComponentProps<typeof ButtonVariants>;
+};
 
-const Button = ({ variant = "default", children, ...props }: ButtonProps) => {
+const buttonStyles = cva(
+	"inline-flex justify-center items-center font-medium rounded-md px-4 py-2 text-sm transition duration-300 ease-in-out",
+	{
+		variants: {
+			intent: {
+				default: "bg-grayDark-6 text-grayDark-11 hover:bg-grayDark-8",
+				subtle: "bg-whiteA-12 text-grayDark-1 transition drop-shadow-glow-sm duration-2000 hover:transition hover:drop-shadow-glow-md hover:duration-500 hover:animate-glow-shadow",
+				destructive: "bg-redDark-6 text-whiteA-12 hover:bg-redDark-8",
+				ghost: "bg-whiteA-1 text-whiteA-10 hover:bg-whiteA-8 hover:text-whiteA-12",
+			},
+			outlined: {
+				true: "border border-grayDark-10",
+			},
+		},
+	}
+);
+
+const Button: FC<ButtonProps> = ({
+	intent = "default",
+	outlined,
+	onClick,
+	children,
+}) => {
+	const className = buttonStyles({ intent, outlined });
+
 	return (
-		<ButtonVariants variant={variant} {...props}>
+		<Toolbar.Button className={className} type="button" onClick={onClick}>
 			{children}
-		</ButtonVariants>
+		</Toolbar.Button>
 	);
 };
 
