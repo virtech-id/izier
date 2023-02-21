@@ -423,9 +423,6 @@ module.exports = {
         },
       },
     },
-    fontFamily: {
-      'inter': ['Inter', 'Arial', 'sans-serif']
-    }
   },
   plugins: [],
 }
