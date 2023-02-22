@@ -82,14 +82,14 @@ export default function Home() {
 					<Link
 						href="https://github.com/virtech-id/izier"
 						target="_blank"
-						className="transition ease-in-out duration-200 hover:text-grayDark-8"
+						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
 					>
 						<GitHubLogoIcon height={24} width={24} />
 					</Link>
 					<Link
 						href="https://instagram.com/izierapp.id"
 						target="_blank"
-						className="transition ease-in-out duration-200 hover:text-grayDark-8"
+						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
 					>
 						<InstagramLogoIcon height={24} width={24} />
 					</Link>
