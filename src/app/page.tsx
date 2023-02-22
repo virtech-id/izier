@@ -71,7 +71,7 @@ export default function Home() {
 						before.
 					</p>
 				</div>
-				<div className="h-[40rem] w-[48rem] transform-gpu lg:block">
+				<div className="h-[40rem] w-[48rem] transform-gpu lg:block hidden">
 					<Canvas camera={{ position: [0.0, 1.0, 9.0] }}>
 						<Blob />
 					</Canvas>
