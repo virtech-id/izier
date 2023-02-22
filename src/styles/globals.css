@@ -44,6 +44,11 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+::selection {
+  background-color: #164430;
+  color: #00DE8F;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
