@@ -7,7 +7,7 @@ type BadgeProps = {
 };
 
 const badgeStyles = cva(
-	"inline-flex justify-center items-center font-bold text-sm px-2 py-1 rounded-full",
+	"whitespace-nowrap select-none inline-flex justify-center items-center font-bold text-sm px-2 py-1 rounded-full",
 	{
 		variants: {
 			intent: {
