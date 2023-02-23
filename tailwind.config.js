@@ -463,5 +463,8 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-debug-screens'),
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+    },
   ],
 }
