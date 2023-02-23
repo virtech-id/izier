@@ -38,12 +38,14 @@ const Home = () => {
 					priority
 				/>
 				<Root className="space-x-4">
-					<Button intent="default">
-						<span className="flex flex-row items-center gap-2">
-							Log in
-							<ArrowRight className="transition ease-in-out hover:translate-x-1" />
-						</span>
-					</Button>
+					<Link href="/auth/login">
+						<Button intent="default">
+							<span className="flex flex-row items-center gap-2">
+								Log in
+								<ArrowRight className="transition ease-in-out hover:translate-x-1" />
+							</span>
+						</Button>
+					</Link>
 					<Button intent="subtle">
 						<span>Join waitlist</span>
 					</Button>
