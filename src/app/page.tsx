@@ -10,7 +10,7 @@ import Badge from "@/component/ui/Badge";
 import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
 import Link from "next/link";
 
-export default function Home() {
+const Home = () => {
 	const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
 	useEffect(() => {
@@ -103,4 +103,6 @@ export default function Home() {
 			</footer>
 		</main>
 	);
-}
+};
+
+export default Home;
