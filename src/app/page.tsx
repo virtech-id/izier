@@ -37,7 +37,7 @@ const Home = () => {
 					height={18}
 					priority
 				/>
-				<Root className="space-x-4">
+				<div className="flex flex-row space-x-4">
 					<Link href="/auth/login">
 						<Button intent="default">
 							<span className="flex flex-row items-center gap-2">
@@ -49,7 +49,7 @@ const Home = () => {
 					<Button intent="subtle">
 						<span>Join waitlist</span>
 					</Button>
-				</Root>
+				</div>
 			</header>
 			<section className="flex flex-row items-center justify-between">
 				<div className="z-10 absolute">
