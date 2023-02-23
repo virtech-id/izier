@@ -22,6 +22,9 @@ const buttonStyles = cva(
 			outlined: {
 				true: "border border-grayDark-10",
 			},
+			fullWidth: {
+				true: "w-full",
+			},
 		},
 	}
 );
