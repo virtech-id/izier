@@ -41,6 +41,7 @@ export default function Home() {
 					<Button intent="default">
 						<span className="flex flex-row items-center gap-2">
 							Log in
+							<ArrowRight className="transition ease-in-out hover:translate-x-1" />
 						</span>
 					</Button>
 					<Button intent="subtle">
