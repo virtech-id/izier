@@ -5,7 +5,6 @@ import Button from "@/component/ui/Button";
 import Blob from "@/component/blob/Blob";
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
-import { Root } from "@radix-ui/react-toolbar";
 import Badge from "@/component/ui/Badge";
 import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
 import Link from "next/link";
