@@ -7,6 +7,7 @@ type ButtonProps = {
 	outlined?: boolean;
 	onClick?: () => void;
 	children: React.ReactNode;
+	fullWidth?: boolean;
 };
 
 const buttonStyles = cva(
@@ -34,8 +35,9 @@ const Button: FC<ButtonProps> = ({
 	outlined,
 	onClick,
 	children,
+	fullWidth,
 }) => {
-	const className = buttonStyles({ intent, outlined });
+	const className = buttonStyles({ intent, outlined, fullWidth });
 
 	return (
 		<Toolbar.Button className={className} type="button" onClick={onClick}>
