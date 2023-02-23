@@ -7,7 +7,10 @@ import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 import { Root } from "@radix-ui/react-toolbar";
 import Badge from "@/component/ui/Badge";
-import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
+import {
+	GitHubLogoIcon,
+	InstagramLogoIcon,
+} from "@radix-ui/react-icons";
 import Link from "next/link";
 
 export default function Home() {
@@ -37,7 +40,12 @@ export default function Home() {
 					height={18}
 					priority
 				/>
-				<Root>
+				<Root className="space-x-4">
+					<Button intent="default">
+						<span className="flex flex-row items-center gap-2">
+							Log in
+						</span>
+					</Button>
 					<Button intent="subtle">
 						<span>Join waitlist</span>
 					</Button>
