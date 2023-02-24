@@ -15,10 +15,12 @@ const buttonStyles = cva(
 	{
 		variants: {
 			intent: {
-				default: "bg-grayDark-6 text-whiteA-12 hover:bg-grayDark-8",
-				subtle: "bg-whiteA-12 text-grayDark-1 transition drop-shadow-glow-sm duration-1500 hover:transition hover:drop-shadow-glow-md hover:duration-500",
-				destructive: "bg-redDark-6 text-whiteA-12 hover:bg-redDark-8",
-				ghost: "bg-whiteA-1 text-whiteA-10 hover:bg-whiteA-8 hover:text-whiteA-12",
+				default:
+					"bg-grayDark-6 text-whiteA-12 hover:bg-grayDark-8 whitespace-nowrap",
+				subtle: "bg-whiteA-12 text-grayDark-1 whitespace-nowrap transition drop-shadow-glow-sm duration-1500 hover:transition hover:drop-shadow-glow-md hover:duration-500",
+				destructive:
+					"bg-redDark-6 text-whiteA-12 whitespace-nowrap hover:bg-redDark-8",
+				ghost: "bg-whiteA-1 text-whiteA-10 hover:bg-whiteA-8 whitespace-nowrap hover:text-whiteA-12",
 			},
 			outlined: {
 				true: "border border-grayDark-10",
