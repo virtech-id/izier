@@ -10,11 +10,11 @@ import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
 import Link from "next/link";
 
 const Home = () => {
-	const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+	const [isContentVisible, setisContentVisible] = useState(false);
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			setIsHeaderVisible(true);
+			setisContentVisible(true);
 		}, 500);
 
 		return () => {
@@ -26,7 +26,7 @@ const Home = () => {
 		<main className="flex flex-col justify-between max-w-7xl p-8 mx-auto bg-black min-h-screen md:min-w-3xl">
 			<header
 				className={`flex flex-row justify-between h-10 items-center bg-transparent z-10 opacity-0 transform -translate-y-full transition-all duration-1000 ${
-					isHeaderVisible ? "opacity-100 translate-y-0" : ""
+					isContentVisible ? "opacity-100 translate-y-0" : ""
 				}`}
 			>
 				<Image
@@ -50,7 +50,11 @@ const Home = () => {
 					</Button>
 				</div>
 			</header>
-			<section className="flex flex-row items-center justify-between">
+			<section
+				className={`flex flex-row items-center justify-between opacity-0 transform translate-x-full transition-all duration-[3000ms] ${
+					isContentVisible ? "opacity-100 translate-x-0" : ""
+				}`}
+			>
 				<div className="z-10 absolute">
 					<Image
 						src="/abstract.svg"
@@ -78,13 +82,17 @@ const Home = () => {
 						before.
 					</p>
 				</div>
-				<div className="h-[40rem] w-[48rem] transform-gpu lg:block hidden">
+				<div className="h-[42rem] w-[50rem] transform-gpu lg:block hidden">
 					<Canvas camera={{ position: [0.0, 1.0, 9.0] }}>
 						<Blob />
 					</Canvas>
 				</div>
 			</section>
-			<footer>
+			<footer
+				className={`opacity-0 transform translate-y-full transition-all duration-1000 ${
+					isContentVisible ? "opacity-100 -translate-y-0" : ""
+				}`}
+			>
 				<div className="flex flex-row gap-6 items-center">
 					<Link
 						href="https://github.com/virtech-id/izier"
