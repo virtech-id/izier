@@ -52,7 +52,7 @@ const Home = () => {
 			</header>
 			<section
 				className={`flex flex-row items-center justify-between opacity-0 transform translate-x-full transition-all duration-[3000ms] ${
-					isContentVisible ? "opacity-100 -translate-x-0" : ""
+					isContentVisible ? "opacity-100 translate-x-0" : ""
 				}`}
 			>
 				<div className="z-10 absolute">
