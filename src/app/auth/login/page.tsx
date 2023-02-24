@@ -8,6 +8,7 @@ import ButtonSocial from "@/component/ui/ButtonSocial";
 
 const Login = () => {
 	return (
+		// TODO: Create responsiveness
 		<main className="flex flex-col items-center justify-center h-screen bg-black">
 			<Image
 				src="/circleGradient.svg"
