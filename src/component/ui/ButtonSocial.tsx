@@ -6,6 +6,7 @@ type ButtonSocialProps = {
 	social?: "google" | "github" | "facebook" | "twitter";
 	onClick?: () => void;
 	children: React.ReactNode;
+	fullWidth?: boolean;
 };
 
 const buttonSocialStyles = cva(
@@ -18,12 +19,20 @@ const buttonSocialStyles = cva(
 				facebook: "bg-blueDark-5 text-whiteA-12 hover:bg-whiteA-10",
 				twitter: "bg-skyDark-5 text-whiteA-12 hover:bg-whiteA-10",
 			},
+			fullWidth: {
+				true: "w-full",
+			},
 		},
 	}
 );
 
-const ButtonSocial: FC<ButtonSocialProps> = ({ social, onClick, children }) => {
-	const className = buttonSocialStyles({ social });
+const ButtonSocial: FC<ButtonSocialProps> = ({
+	social,
+	onClick,
+	children,
+	fullWidth,
+}) => {
+	const className = buttonSocialStyles({ social, fullWidth });
 
 	return (
 		<Toolbar.Root>
