@@ -13,7 +13,6 @@ module.exports = {
       dropShadow: {
         'glow-sm': '0 0 10px rgba(76, 195, 138, 1)',
         'glow-md': '0 0 20px rgba(76, 195, 138, 1)',
-        'glassmorphism': '0 10px 20px rgba(0, 0, 0, 0.05)',
       },
       keyframes: {
         'fade-in-down': {
@@ -458,10 +457,6 @@ module.exports = {
           10: 'hsla(0, 0%, 100%, 0.446)',
           11: 'hsla(0, 0%, 100%, 0.592)',
           12: 'hsla(0, 0%, 100%, 0.923)',
-        },
-        glassmorphishm: {
-          8: 'rgba(32, 32, 32, 0.08)',
-          38: 'rgba(32, 32, 32, 0.38)',
         },
       },
     },
