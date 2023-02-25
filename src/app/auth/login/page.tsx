@@ -64,7 +64,7 @@ const Login = () => {
 						</Button>
 						<div className="flex flex-row items-center justify-around space-x-6">
 							<Separator.Root
-								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-24 data-[orientation=vertical]:h-24 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
+								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-20 data-[orientation=vertical]:h-20 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
 								decorative
 								orientation="horizontal"
 							/>
@@ -72,7 +72,7 @@ const Login = () => {
 								Or login with
 							</span>
 							<Separator.Root
-								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-24 data-[orientation=vertical]:h-24 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
+								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-20 data-[orientation=vertical]:h-20 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
 								decorative
 								orientation="horizontal"
 							/>
