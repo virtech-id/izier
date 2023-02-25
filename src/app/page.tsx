@@ -7,7 +7,7 @@ import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
 import { Root } from "@radix-ui/react-toolbar";
 import Badge from "@/component/ui/Badge";
-import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
+import { GitHubLogoIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 export default function Home() {
@@ -84,22 +84,14 @@ export default function Home() {
 						target="_blank"
 						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
 					>
-						<GithubCircle
-							strokeWidth={1}
-							width="1.5rem"
-							height="1.5rem"
-						/>
+						<GitHubLogoIcon height={24} width={24} />
 					</Link>
 					<Link
 						href="https://instagram.com/izierapp.id"
 						target="_blank"
 						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
 					>
-						<Instagram
-							strokeWidth={1}
-							width="1.5rem"
-							height="1.5rem"
-						/>
+						<InstagramLogoIcon height={24} width={24} />
 					</Link>
 				</div>
 			</footer>
