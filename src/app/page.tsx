@@ -50,7 +50,11 @@ const Home = () => {
 					</Button>
 				</div>
 			</header>
-			<section className="flex flex-row items-center justify-between">
+			<section
+				className={`flex flex-row items-center justify-between opacity-0 transform translate-x-full transition-all duration-[3000ms] ${
+					isContentVisible ? "opacity-100 -translate-x-0" : ""
+				}`}
+			>
 				<div className="z-10 absolute">
 					<Image
 						src="/abstract.svg"
@@ -84,7 +88,11 @@ const Home = () => {
 					</Canvas>
 				</div>
 			</section>
-			<footer>
+			<footer
+				className={`opacity-0 transform translate-y-full transition-all duration-1000 ${
+					isContentVisible ? "opacity-100 translate-y-0" : ""
+				}`}
+			>
 				<div className="flex flex-row gap-6 items-center">
 					<Link
 						href="https://github.com/virtech-id/izier"
@@ -112,6 +120,6 @@ const Home = () => {
 			</footer>
 		</main>
 	);
-}
+};
 
 export default Home;
