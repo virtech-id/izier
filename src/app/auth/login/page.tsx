@@ -39,13 +39,13 @@ const Login = () => {
 							height={18}
 							priority
 						/>
-						<span className="text-2xl font-bold leading-8">
+						<span className="text-2xl font-bold leading-8 text-white">
 							Log in to your account
 						</span>
 					</div>
 					<form className="flex flex-col justify-start space-y-4">
 						<div className="flex flex-col space-y-1">
-							<label className="text-base font-semibold leading-6">
+							<label className="text-base font-semibold leading-6 text-white">
 								Email
 							</label>
 							<input
