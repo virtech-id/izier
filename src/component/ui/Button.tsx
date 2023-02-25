@@ -8,6 +8,7 @@ type ButtonProps = {
 	onClick?: () => void;
 	children: React.ReactNode;
 	fullWidth?: boolean;
+	disabled?: boolean;
 };
 
 const buttonStyles = cva(
@@ -28,6 +29,9 @@ const buttonStyles = cva(
 			fullWidth: {
 				true: "w-full",
 			},
+			disabled: {
+				true: "disabled:bg-whiteA-8 disabled:cursor-not-allowed disabled:text-whiteA-10",
+			},
 		},
 	}
 );
@@ -38,8 +42,9 @@ const Button: FC<ButtonProps> = ({
 	onClick,
 	children,
 	fullWidth,
+	disabled,
 }) => {
-	const className = buttonStyles({ intent, outlined, fullWidth });
+	const className = buttonStyles({ intent, outlined, fullWidth, disabled });
 
 	return (
 		<Toolbar.Root>
@@ -47,6 +52,7 @@ const Button: FC<ButtonProps> = ({
 				className={className}
 				type="button"
 				onClick={onClick}
+				disabled={disabled}
 			>
 				{children}
 			</Toolbar.Button>
