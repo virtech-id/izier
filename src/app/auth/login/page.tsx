@@ -5,6 +5,7 @@ import { ArrowRight } from "iconoir-react";
 import Image from "next/image";
 import * as Separator from "@radix-ui/react-separator";
 import ButtonSocial from "@/component/ui/ButtonSocial";
+import { SOCIAL_BUTTON_ITEMS } from "./socialButtonLists";
 
 const Login = () => {
 	return (
@@ -66,54 +67,23 @@ const Login = () => {
 							/>
 						</div>
 						<div className="flex flex-col gap-4 sm:flex sm:flex-row sm:justify-between sm:items-center">
-							<ButtonSocial social="google" fullWidth>
-								<span className="flex flex-row gap-2">
-									Google
-									<Image
-										src="/google.svg"
-										alt="Google logo"
-										width={16}
-										height={16}
-										priority
-									/>
-								</span>
-							</ButtonSocial>
-							<ButtonSocial social="github" fullWidth>
-								<span className="flex flex-row gap-2">
-									GitHub
-									<Image
-										src="/github.svg"
-										alt="Github logo"
-										width={16}
-										height={16}
-										priority
-									/>
-								</span>
-							</ButtonSocial>
-							<ButtonSocial social="twitter" fullWidth>
-								<span className="flex flex-row gap-2">
-									Twitter
-									<Image
-										src="/twitter.svg"
-										alt="Twitter logo"
-										width={16}
-										height={16}
-										priority
-									/>
-								</span>
-							</ButtonSocial>
-							<ButtonSocial social="facebook" fullWidth>
-								<span className="flex flex-row gap-2">
-									Facebook
-									<Image
-										src="/facebook.svg"
-										alt="Facebook logo"
-										width={16}
-										height={16}
-										priority
-									/>
-								</span>
-							</ButtonSocial>
+							{SOCIAL_BUTTON_ITEMS.map((item) => (
+								<ButtonSocial
+									key={item.text}
+									social={item.type}
+									fullWidth
+								>
+									<span className="flex flex-row gap-2">
+										{item.text}
+										<Image
+											src={item.src}
+											alt={item.alt}
+											width={16}
+											height={16}
+										/>
+									</span>
+								</ButtonSocial>
+							))}
 						</div>
 					</form>
 				</div>
