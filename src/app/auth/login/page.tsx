@@ -39,13 +39,13 @@ const Login = () => {
 							height={18}
 							priority
 						/>
-						<span className="text-2xl font-bold leading-8">
+						<span className="text-2xl font-bold leading-8 text-white">
 							Log in to your account
 						</span>
 					</div>
 					<form className="flex flex-col justify-start space-y-4">
 						<div className="flex flex-col space-y-1">
-							<label className="text-base font-semibold leading-6">
+							<label className="text-base font-semibold leading-6 text-white">
 								Email
 							</label>
 							<input
@@ -64,7 +64,7 @@ const Login = () => {
 						</Button>
 						<div className="flex flex-row items-center justify-around space-x-6">
 							<Separator.Root
-								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-24 data-[orientation=vertical]:h-24 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
+								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-20 data-[orientation=vertical]:h-20 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
 								decorative
 								orientation="horizontal"
 							/>
@@ -72,7 +72,7 @@ const Login = () => {
 								Or login with
 							</span>
 							<Separator.Root
-								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-24 data-[orientation=vertical]:h-24 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
+								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-20 data-[orientation=vertical]:h-20 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
 								decorative
 								orientation="horizontal"
 							/>
