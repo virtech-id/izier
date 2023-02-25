@@ -23,7 +23,7 @@ const Home = () => {
 	}, []);
 
 	return (
-		<main className="flex flex-col justify-between max-w-7xl p-8 mx-auto bg-black min-h-screen md:min-w-3xl">
+		<main className="flex flex-col justify-between max-w-7xl p-8 mx-auto bg-black min-h-screen min-w-screen md:min-w-3xl">
 			<header
 				className={`flex flex-row justify-between h-10 items-center bg-transparent z-10 opacity-0 transform -translate-y-full transition-all duration-1000 ${
 					isContentVisible ? "opacity-100 translate-y-0" : ""
@@ -51,8 +51,8 @@ const Home = () => {
 				</div>
 			</header>
 			<section
-				className={`flex flex-row items-center justify-between opacity-0 transform translate-x-full transition-all duration-[3000ms] ${
-					isContentVisible ? "opacity-100 translate-x-0" : ""
+				className={`flex flex-row items-center justify-between opacity-0 transform transition-all duration-[3000ms] ${
+					isContentVisible ? "opacity-100" : ""
 				}`}
 			>
 				<div className="z-10 absolute">
