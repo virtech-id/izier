@@ -52,21 +52,21 @@ const Login = () => {
 						</Button>
 						<div className="flex flex-row items-center justify-around space-x-6">
 							<Separator.Root
-								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-52 data-[orientation=vertical]:h-52"
+								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-24 data-[orientation=vertical]:h-24 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
 								decorative
 								orientation="horizontal"
 							/>
-							<span className="text-sm font-medium leading-5 text-whiteA-10">
+							<span className="text-sm font-medium leading-5 text-whiteA-10 whitespace-nowrap">
 								Or login with
 							</span>
 							<Separator.Root
-								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-52 data-[orientation=vertical]:h-52"
+								className="bg-whiteA-10 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-24 data-[orientation=vertical]:h-24 sm:data-[orientation=horizontal]:w-52 sm:data-[orientation=vertical]:h-52"
 								decorative
 								orientation="horizontal"
 							/>
 						</div>
-						<div className="flex flex-row items-center justify-between">
-							<ButtonSocial social="google">
+						<div className="flex flex-col gap-4 sm:flex sm:flex-row sm:justify-between sm:items-center">
+							<ButtonSocial social="google" fullWidth>
 								<span className="flex flex-row gap-2">
 									Google
 									<Image
@@ -78,7 +78,7 @@ const Login = () => {
 									/>
 								</span>
 							</ButtonSocial>
-							<ButtonSocial social="github">
+							<ButtonSocial social="github" fullWidth>
 								<span className="flex flex-row gap-2">
 									GitHub
 									<Image
@@ -90,7 +90,7 @@ const Login = () => {
 									/>
 								</span>
 							</ButtonSocial>
-							<ButtonSocial social="twitter">
+							<ButtonSocial social="twitter" fullWidth>
 								<span className="flex flex-row gap-2">
 									Twitter
 									<Image
@@ -102,7 +102,7 @@ const Login = () => {
 									/>
 								</span>
 							</ButtonSocial>
-							<ButtonSocial social="facebook">
+							<ButtonSocial social="facebook" fullWidth>
 								<span className="flex flex-row gap-2">
 									Facebook
 									<Image
