@@ -49,6 +49,7 @@ module.exports = {
         'glow-shadow': 'glow 2s ease-in-out infinite',
       },
       transitionDuration: {
+        '1500': '1500ms',
         '2000': '2000ms',
       },
       colors: {
