@@ -6,10 +6,20 @@ import Image from "next/image";
 import * as Separator from "@radix-ui/react-separator";
 import ButtonSocial from "@/component/ui/ButtonSocial";
 import { SOCIAL_BUTTON_ITEMS } from "./socialButtonLists";
+import { useState } from "react";
 
 const Login = () => {
+	const [isEmpty, setIsEmpty] = useState(true);
+
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		if (e.target.value.length > 0) {
+			setIsEmpty(false);
+		} else {
+			setIsEmpty(true);
+		}
+	};
+
 	return (
-		// TODO: Create responsiveness
 		<main className="flex flex-col items-center justify-center h-screen bg-black">
 			<Image
 				src="/circleGradient.svg"
@@ -40,12 +50,13 @@ const Login = () => {
 							</label>
 							<input
 								type="email"
+								onChange={handleInputChange}
 								aria-label="email input"
 								className="w-full py-2 pl-3 rounded-md bg-whiteA-12 pr-14 text-slateDark-1"
 								placeholder="jane.doe@gmail.com"
 							/>
 						</div>
-						<Button intent="default" fullWidth>
+						<Button intent="default" fullWidth disabled={isEmpty}>
 							<span className="flex flex-row items-center gap-2">
 								Login with email
 								<ArrowRight className="transition ease-in-out hover:translate-x-1" />
