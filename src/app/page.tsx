@@ -10,11 +10,11 @@ import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
 import Link from "next/link";
 
 const Home = () => {
-	const [isContentVisible, setIsContentVisible] = useState(false);
+	const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			setIsContentVisible(true);
+			setIsHeaderVisible(true);
 		}, 500);
 
 		return () => {
@@ -26,7 +26,7 @@ const Home = () => {
 		<main className="flex flex-col justify-between max-w-7xl p-8 mx-auto bg-black min-h-screen md:min-w-3xl">
 			<header
 				className={`flex flex-row justify-between h-10 items-center bg-transparent z-10 opacity-0 transform -translate-y-full transition-all duration-1000 ${
-					isContentVisible ? "opacity-100 translate-y-0" : ""
+					isHeaderVisible ? "opacity-100 translate-y-0" : ""
 				}`}
 			>
 				<Image
