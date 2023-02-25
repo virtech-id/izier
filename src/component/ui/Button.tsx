@@ -35,15 +35,9 @@ const Button: FC<ButtonProps> = ({
 	const className = buttonStyles({ intent, outlined });
 
 	return (
-		<Toolbar.Root>
-			<Toolbar.Button
-				className={className}
-				type="button"
-				onClick={onClick}
-			>
-				{children}
-			</Toolbar.Button>
-		</Toolbar.Root>
+		<Toolbar.Button className={className} type="button" onClick={onClick}>
+			{children}
+		</Toolbar.Button>
 	);
 };
 
