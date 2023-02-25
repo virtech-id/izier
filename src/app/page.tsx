@@ -36,7 +36,7 @@ const Home = () => {
 					height={18}
 					priority
 				/>
-				<div className="flex flex-row space-x-4">
+				<div className="flex flex-ro space-x-4">
 					<Link href="/auth/login">
 						<Button intent="default">
 							<span className="flex flex-row items-center gap-2">
