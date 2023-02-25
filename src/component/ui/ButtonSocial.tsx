@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { FC } from "react";
 
 type ButtonSocialProps = {
-	social?: "google" | "github" | "facebook" | "twitter";
+	social?: "google" | "github" | "facebook" | "twitter" | undefined;
 	onClick?: () => void;
 	children: React.ReactNode;
 	fullWidth?: boolean;
