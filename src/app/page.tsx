@@ -5,7 +5,6 @@ import Button from "@/component/ui/Button";
 import Blob from "@/component/blob/Blob";
 import { Canvas } from "@react-three/fiber";
 import { useEffect, useState } from "react";
-import { Root } from "@radix-ui/react-toolbar";
 import Badge from "@/component/ui/Badge";
 import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
 import Link from "next/link";
@@ -37,11 +36,9 @@ export default function Home() {
 					height={18}
 					priority
 				/>
-				<Root>
-					<Button intent="subtle">
-						<span>Join waitlist</span>
-					</Button>
-				</Root>
+				<Button intent="subtle">
+					<span>Join waitlist</span>
+				</Button>
 			</header>
 			<section className="flex flex-row items-center justify-between">
 				<div className="z-10 absolute">
