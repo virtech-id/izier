@@ -1,23 +1,23 @@
-"use client";
+"use client"
 
-import Button from "@/component/ui/Button";
-import { ArrowRight } from "iconoir-react";
-import Image from "next/image";
-import * as Separator from "@radix-ui/react-separator";
-import ButtonSocial from "@/component/ui/ButtonSocial";
-import { SOCIAL_BUTTON_ITEMS } from "./socialButtonLists";
-import { useState } from "react";
+import Button from "@/component/ui/Button"
+import { ArrowRight } from "iconoir-react"
+import Image from "next/image"
+import * as Separator from "@radix-ui/react-separator"
+import ButtonSocial from "@/component/ui/ButtonSocial"
+import { SOCIAL_BUTTON_ITEMS } from "./socialButtonLists"
+import { useState } from "react"
 
 const Login = () => {
-	const [isEmpty, setIsEmpty] = useState(true);
+	const [isEmpty, setIsEmpty] = useState(true)
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		if (e.target.value.length > 0) {
-			setIsEmpty(false);
+			setIsEmpty(false)
 		} else {
-			setIsEmpty(true);
+			setIsEmpty(true)
 		}
-	};
+	}
 
 	return (
 		<main className="flex flex-col items-center justify-center h-screen bg-black">
@@ -79,11 +79,7 @@ const Login = () => {
 						</div>
 						<div className="flex flex-col gap-4 sm:flex sm:flex-row sm:justify-between sm:items-center">
 							{SOCIAL_BUTTON_ITEMS.map((item) => (
-								<ButtonSocial
-									key={item.text}
-									social={item.type}
-									fullWidth
-								>
+								<ButtonSocial key={item.text} social={item.type} fullWidth>
 									<span className="flex flex-row gap-2">
 										{item.text}
 										<Image
@@ -100,7 +96,7 @@ const Login = () => {
 				</div>
 			</div>
 		</main>
-	);
-};
+	)
+}
 
-export default Login;
+export default Login

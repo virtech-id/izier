@@ -1,13 +1,13 @@
-import * as Toolbar from "@radix-ui/react-toolbar";
-import { cva } from "class-variance-authority";
-import { FC } from "react";
+import * as Toolbar from "@radix-ui/react-toolbar"
+import { cva } from "class-variance-authority"
+import { FC } from "react"
 
 type ButtonSocialProps = {
-	social?: "google" | "github" | "facebook" | "twitter" | undefined;
-	onClick?: () => void;
-	children: React.ReactNode;
-	fullWidth?: boolean;
-};
+	social?: "google" | "github" | "facebook" | "twitter" | undefined
+	onClick?: () => void
+	children: React.ReactNode
+	fullWidth?: boolean
+}
 
 const buttonSocialStyles = cva(
 	"inline-flex justify-center items-center font-medium rounded-md px-4 py-2 text-sm transition duration-300 ease-in-out",
@@ -23,8 +23,8 @@ const buttonSocialStyles = cva(
 				true: "w-full",
 			},
 		},
-	}
-);
+	},
+)
 
 const ButtonSocial: FC<ButtonSocialProps> = ({
 	social,
@@ -32,19 +32,15 @@ const ButtonSocial: FC<ButtonSocialProps> = ({
 	children,
 	fullWidth,
 }) => {
-	const className = buttonSocialStyles({ social, fullWidth });
+	const className = buttonSocialStyles({ social, fullWidth })
 
 	return (
 		<Toolbar.Root>
-			<Toolbar.Button
-				className={className}
-				type="button"
-				onClick={onClick}
-			>
+			<Toolbar.Button className={className} type="button" onClick={onClick}>
 				{children}
 			</Toolbar.Button>
 		</Toolbar.Root>
-	);
-};
+	)
+}
 
-export default ButtonSocial;
+export default ButtonSocial

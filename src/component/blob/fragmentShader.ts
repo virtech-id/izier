@@ -21,6 +21,6 @@ const fragmentShader = `
 
         gl_FragColor = vec4(mix(vec3(0.0), finalColor, metallic), 1.0);
     }
-`;
+`
 
-export default fragmentShader;
+export default fragmentShader

@@ -1,5 +1,5 @@
-import "../styles/globals.css";
-import { Inter } from "next/font/google";
+import "../styles/globals.css"
+import { Inter } from "next/font/google"
 
 export const metadata = {
 	title: "Home | Izier",
@@ -16,17 +16,17 @@ export const metadata = {
 		initialScale: 1,
 		maximumScale: 1,
 	},
-};
+}
 
 const inter = Inter({
 	subsets: ["latin"],
 	fallback: ["Arial", "sans-serif", "system-ui"],
-});
+})
 
 export default function RootLayout({
 	children,
 }: {
-	children: React.ReactNode;
+	children: React.ReactNode
 }) {
 	return (
 		<html lang="en" className={inter.className}>
@@ -37,5 +37,5 @@ export default function RootLayout({
 			<head />
 			<body>{children}</body>
 		</html>
-	);
+	)
 }
