@@ -1,4 +1,4 @@
-import { SocialButtonTypes } from "types/socialButton";
+import { SocialButtonTypes } from "types/socialButton"
 
 export const SOCIAL_BUTTON_ITEMS: SocialButtonTypes[] = [
 	{
@@ -25,4 +25,4 @@ export const SOCIAL_BUTTON_ITEMS: SocialButtonTypes[] = [
 		src: "/facebook.svg",
 		alt: "Facebook logo",
 	},
-];
+]

@@ -1,9 +1,9 @@
-import React from "react";
-import Link, { LinkProps } from "next/link";
+import React from "react"
+import Link, { LinkProps } from "next/link"
 
 interface Props extends LinkProps {
-	className?: string;
-	children: React.ReactNode;
+	className?: string
+	children: React.ReactNode
 }
 
 const TextLink = ({ href, as, className, children, ...rest }: Props) => {
@@ -16,7 +16,7 @@ const TextLink = ({ href, as, className, children, ...rest }: Props) => {
 		>
 			{children}
 		</Link>
-	);
-};
+	)
+}
 
-export default TextLink;
+export default TextLink

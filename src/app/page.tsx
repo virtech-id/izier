@@ -1,26 +1,26 @@
-"use client";
+"use client"
 
-import Image from "next/image";
-import Button from "@/component/ui/Button";
-import Blob from "@/component/blob/Blob";
-import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
-import Badge from "@/component/ui/Badge";
-import { GithubCircle, Instagram, ArrowRight } from "iconoir-react";
-import Link from "next/link";
+import Image from "next/image"
+import Button from "@/component/ui/Button"
+import Blob from "@/component/blob/Blob"
+import { Canvas } from "@react-three/fiber"
+import { useEffect, useState } from "react"
+import Badge from "@/component/ui/Badge"
+import { GithubCircle, Instagram, ArrowRight } from "iconoir-react"
+import Link from "next/link"
 
 const Home = () => {
-	const [isContentVisible, setIsContentVisible] = useState(false);
+	const [isContentVisible, setIsContentVisible] = useState(false)
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			setIsContentVisible(true);
-		}, 500);
+			setIsContentVisible(true)
+		}, 500)
 
 		return () => {
-			clearTimeout(timeout);
-		};
-	}, []);
+			clearTimeout(timeout)
+		}
+	}, [])
 
 	return (
 		<main className="flex flex-col justify-between max-w-7xl p-8 mx-auto bg-black min-h-screen min-w-screen md:min-w-3xl">
@@ -67,19 +67,15 @@ const Home = () => {
 				</div>
 				<div className="flex flex-col gap-3 max-w-xl z-20">
 					<div>
-						<Badge
-							intent="warning"
-							text="Currently in development"
-						/>
+						<Badge intent="warning" text="Currently in development" />
 					</div>
 					<h1 className="text-7xl inline-block text-transparent leading-none font-bold bg-gradient-to-br from-white to-zinc-800 bg-clip-text md:text-6xl sm:text-5xl">
 						Reclaim your wasted hour
 					</h1>
 					<p className="text-base leading-6 font-normal text-grayDark-11">
-						Take your productivity to the next level with advanced
-						tools designed to help you streamline your work,
-						maximize your time, and accomplish more than ever
-						before.
+						Take your productivity to the next level with advanced tools
+						designed to help you streamline your work, maximize your time, and
+						accomplish more than ever before.
 					</p>
 				</div>
 				<div className="h-[40rem] w-[48rem] transform-gpu lg:block hidden">
@@ -99,27 +95,19 @@ const Home = () => {
 						target="_blank"
 						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
 					>
-						<GithubCircle
-							strokeWidth={1}
-							width="1.5rem"
-							height="1.5rem"
-						/>
+						<GithubCircle strokeWidth={1} width="1.5rem" height="1.5rem" />
 					</Link>
 					<Link
 						href="https://instagram.com/izierapp.id"
 						target="_blank"
 						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
 					>
-						<Instagram
-							strokeWidth={1}
-							width="1.5rem"
-							height="1.5rem"
-						/>
+						<Instagram strokeWidth={1} width="1.5rem" height="1.5rem" />
 					</Link>
 				</div>
 			</footer>
 		</main>
-	);
-};
+	)
+}
 
-export default Home;
+export default Home

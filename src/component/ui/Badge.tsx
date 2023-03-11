@@ -1,10 +1,10 @@
-import { cva } from "class-variance-authority";
-import { FC } from "react";
+import { cva } from "class-variance-authority"
+import { FC } from "react"
 
 type BadgeProps = {
-	intent: "primary" | "secondary" | "success" | "warning" | "danger" | "info";
-	text: string;
-};
+	intent: "primary" | "secondary" | "success" | "warning" | "danger" | "info"
+	text: string
+}
 
 const badgeStyles = cva(
 	"whitespace-nowrap select-none inline-flex justify-center items-center font-bold text-sm px-2 py-1 rounded-full",
@@ -19,13 +19,13 @@ const badgeStyles = cva(
 				info: "bg-cyanDark-6 text-cyanDark-11",
 			},
 		},
-	}
-);
+	},
+)
 
 const Badge: FC<BadgeProps> = ({ intent, text }) => {
-	const className = badgeStyles({ intent });
+	const className = badgeStyles({ intent })
 
-	return <span className={className}>{text}</span>;
-};
+	return <span className={className}>{text}</span>
+}
 
-export default Badge;
+export default Badge
