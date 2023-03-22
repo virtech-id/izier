@@ -94,6 +94,7 @@ const Home = () => {
 						href="https://github.com/virtech-id/izier"
 						target="_blank"
 						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
+						aria-label="Github"
 					>
 						<GithubCircle strokeWidth={1} width="1.5rem" height="1.5rem" />
 					</Link>
@@ -101,6 +102,7 @@ const Home = () => {
 						href="https://instagram.com/izierapp.id"
 						target="_blank"
 						className="transition ease-in-out duration-200 bg-clip-text text-grayDark-10 hover:text-whiteA-12"
+						aria-label="Instagram"
 					>
 						<Instagram strokeWidth={1} width="1.5rem" height="1.5rem" />
 					</Link>
