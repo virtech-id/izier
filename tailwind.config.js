@@ -15,6 +15,9 @@ module.exports = {
         'glow-md': '0 0 20px rgba(76, 195, 138, 1)',
         'glassmorphism': '0 10px 20px rgba(0, 0, 0, 0.05)',
       },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+      },
       keyframes: {
         'fade-in-down': {
           '0%': {
