@@ -39,14 +39,14 @@ const Home = () => {
 				<div className="flex flex-row space-x-4">
 					<Link href="/auth/login">
 						<Button intent="default">
-							<span className="flex flex-row items-center gap-2">
+							<span className="flex flex-row items-center gap-2 font-inter">
 								Log in
 								<ArrowRight className="transition ease-in-out hover:translate-x-1" />
 							</span>
 						</Button>
 					</Link>
 					<Button intent="subtle">
-						<span>Join waitlist</span>
+						<span className="font-inter">Join waitlist</span>
 					</Button>
 				</div>
 			</header>
@@ -69,10 +69,10 @@ const Home = () => {
 					<div>
 						<Badge intent="warning" text="Currently in development" />
 					</div>
-					<h1 className="text-7xl inline-block text-transparent leading-none font-bold bg-gradient-to-br from-white to-zinc-800 bg-clip-text md:text-6xl sm:text-5xl">
+					<h1 className="text-7xl inline-block text-transparent font-inter leading-none font-bold bg-gradient-to-br from-white to-zinc-800 bg-clip-text md:text-6xl sm:text-5xl">
 						Reclaim your wasted hour
 					</h1>
-					<p className="text-base leading-6 font-normal text-grayDark-11">
+					<p className="text-base leading-6 font-normal text-grayDark-11 font-inter">
 						Take your productivity to the next level with advanced tools
 						designed to help you streamline your work, maximize your time, and
 						accomplish more than ever before.
